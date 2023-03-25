@@ -20,11 +20,12 @@ class Edificio(Inmueble):
 
         
         #======== Metodos ========      
-        def getInfo (self, valor):
-            print ("Datos del edificio" + "\n" +
-                   "Valor terreno: $" + str(self.calcularValor(valor)) + "\n" +
-                   "Direccion: " + self.getDireccion + "\n" +
-                   "Antiguedad: " + str(self.getAntiguedad) + "\n" +
-                   "Nro pisos: " + self.nroPiso + "\n" +
-                   "Caracteristicas area social?:" + self.areaSocial)
+        def getInfo (self, valorEntrada, valorXmt2):            
+            print ("======== Datos del edificio ======== " + "\n" +
+                   "Valor edificio: $" + str(self.calcularValorTerreno(valorXmt2)) + "\n" +
+                   "Saldo a pagar: Con entrada de $" + str(valorEntrada) + " el saldo es: $" + str(self.validarEntrada(valorEntrada, valorXmt2)) + "\n" +
+                   "Direccion: " + str(self.getDireccion()) + "\n" +
+                   "Años antiguedad: " + str(self.getAntiguedad()) + "\n" +
+                   "Nro pisos: " + str(self.nroPiso) + "\n" +
+                   "Caracteristicas area social?: " + self.areaSocial)            
                 

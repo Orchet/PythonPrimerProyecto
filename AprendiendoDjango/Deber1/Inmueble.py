@@ -29,10 +29,9 @@ class Inmueble:
             return (self.getMt2() * valorXmt2)
         
         def validarEntrada (self, valorEntrada, valorXmt2):
-            valorTerreno = calcularValorTerreno(valorXmt2)
+            valorTerreno = self.calcularValorTerreno(valorXmt2)
             saldo = valorTerreno - valorEntrada
-            return("Valor Terreno: $" + str(valorTerreno) + ", Saldo para pagar: $" + str(saldo))
-            
+            return(saldo)
 
 
 
